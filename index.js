@@ -604,6 +604,8 @@ function sanitizeHtml(html, options, _recursing) {
     if (typeof (s) !== 'string') {
       s = s + '';
     }
+    // For the relay network use case, we don't want to escape any characters
+    /*
     if (options.parser.decodeEntities) {
       s = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       if (quote) {
@@ -621,6 +623,7 @@ function sanitizeHtml(html, options, _recursing) {
     if (quote) {
       s = s.replace(/"/g, '&quot;');
     }
+    */
     return s;
   }
 
